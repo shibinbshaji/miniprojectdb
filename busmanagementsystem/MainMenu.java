@@ -23,6 +23,8 @@ public class MainMenu extends javax.swing.JFrame {
         RoutePanel.setVisible(false);
         BusPanel.setVisible(false);
         StaffPanel.setVisible(false);
+        ForeseePanel.setVisible(false);
+        ForeseePanel2.setVisible(false);
     }
 
     /**
@@ -45,6 +47,21 @@ public class MainMenu extends javax.swing.JFrame {
         TopPanel = new javax.swing.JPanel();
         CloseButton = new javax.swing.JButton();
         SelectOptionDisplay = new javax.swing.JPanel();
+        ForeseePanel2 = new javax.swing.JPanel();
+        Foreseetxt1 = new javax.swing.JLabel();
+        about2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        ForeseePanel = new javax.swing.JPanel();
+        Foreseetxt = new javax.swing.JLabel();
+        about1 = new javax.swing.JLabel();
+        FSource = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
+        Emp_id_staff1 = new javax.swing.JLabel();
+        Emp_id_staff2 = new javax.swing.JLabel();
+        FDestination = new javax.swing.JTextField();
+        jSeparator5 = new javax.swing.JSeparator();
+        Foresee = new javax.swing.JButton();
         StaffPanel = new javax.swing.JPanel();
         Staff = new javax.swing.JLabel();
         Emp_id_staff = new javax.swing.JLabel();
@@ -321,6 +338,138 @@ public class MainMenu extends javax.swing.JFrame {
 
         SelectOptionDisplay.setBackground(new java.awt.Color(82, 84, 83));
         SelectOptionDisplay.setLayout(null);
+
+        ForeseePanel2.setBackground(new java.awt.Color(84, 82, 83));
+
+        Foreseetxt1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        Foreseetxt1.setForeground(new java.awt.Color(255, 255, 255));
+        Foreseetxt1.setText("Foresee");
+
+        about2.setForeground(new java.awt.Color(255, 255, 255));
+        about2.setText("Be alerted on these areas while driving.");
+
+        jTable1.setBackground(new java.awt.Color(84, 82, 83));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        jTable1.setRowHeight(20);
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout ForeseePanel2Layout = new javax.swing.GroupLayout(ForeseePanel2);
+        ForeseePanel2.setLayout(ForeseePanel2Layout);
+        ForeseePanel2Layout.setHorizontalGroup(
+            ForeseePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ForeseePanel2Layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(ForeseePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ForeseePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(about2, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Foreseetxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(214, Short.MAX_VALUE))
+        );
+        ForeseePanel2Layout.setVerticalGroup(
+            ForeseePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ForeseePanel2Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(Foreseetxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(about2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(304, 304, 304))
+        );
+
+        SelectOptionDisplay.add(ForeseePanel2);
+        ForeseePanel2.setBounds(0, 0, 1020, 640);
+
+        ForeseePanel.setBackground(new java.awt.Color(82, 84, 83));
+        ForeseePanel.setLayout(null);
+
+        Foreseetxt.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        Foreseetxt.setForeground(new java.awt.Color(255, 255, 255));
+        Foreseetxt.setText("Foresee");
+        ForeseePanel.add(Foreseetxt);
+        Foreseetxt.setBounds(100, 60, 196, 61);
+
+        about1.setForeground(new java.awt.Color(255, 255, 255));
+        about1.setText("Enter the Source and Destination to get look ahead into the path.");
+        ForeseePanel.add(about1);
+        about1.setBounds(100, 130, 701, 59);
+
+        FSource.setBackground(new java.awt.Color(82, 84, 83));
+        FSource.setForeground(new java.awt.Color(255, 255, 255));
+        FSource.setToolTipText("Enter Trip ID");
+        FSource.setBorder(null);
+        FSource.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FSourceActionPerformed(evt);
+            }
+        });
+        ForeseePanel.add(FSource);
+        FSource.setBounds(220, 260, 280, 39);
+
+        jSeparator4.setBackground(new java.awt.Color(255, 102, 0));
+        jSeparator4.setForeground(new java.awt.Color(255, 102, 0));
+        ForeseePanel.add(jSeparator4);
+        jSeparator4.setBounds(610, 300, 280, 10);
+
+        Emp_id_staff1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Emp_id_staff1.setForeground(new java.awt.Color(255, 255, 255));
+        Emp_id_staff1.setText("From Source:");
+        ForeseePanel.add(Emp_id_staff1);
+        Emp_id_staff1.setBounds(110, 270, 100, 28);
+
+        Emp_id_staff2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Emp_id_staff2.setForeground(new java.awt.Color(255, 255, 255));
+        Emp_id_staff2.setText("to Destination:");
+        ForeseePanel.add(Emp_id_staff2);
+        Emp_id_staff2.setBounds(510, 270, 100, 28);
+
+        FDestination.setBackground(new java.awt.Color(82, 84, 83));
+        FDestination.setForeground(new java.awt.Color(255, 255, 255));
+        FDestination.setToolTipText("Enter Trip ID");
+        FDestination.setBorder(null);
+        FDestination.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FDestinationActionPerformed(evt);
+            }
+        });
+        ForeseePanel.add(FDestination);
+        FDestination.setBounds(610, 260, 280, 39);
+
+        jSeparator5.setBackground(new java.awt.Color(255, 102, 0));
+        jSeparator5.setForeground(new java.awt.Color(255, 102, 0));
+        ForeseePanel.add(jSeparator5);
+        jSeparator5.setBounds(220, 300, 280, 10);
+
+        Foresee.setBackground(new java.awt.Color(255, 102, 0));
+        Foresee.setText("Foresee");
+        Foresee.setBorder(null);
+        Foresee.setBorderPainted(false);
+        Foresee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Foresee.setFocusPainted(false);
+        Foresee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ForeseeActionPerformed(evt);
+            }
+        });
+        ForeseePanel.add(Foresee);
+        Foresee.setBounds(500, 350, 111, 42);
+
+        SelectOptionDisplay.add(ForeseePanel);
+        ForeseePanel.setBounds(0, 0, 1020, 640);
 
         StaffPanel.setBackground(new java.awt.Color(82, 84, 83));
         StaffPanel.setLayout(null);
@@ -628,7 +777,9 @@ public class MainMenu extends javax.swing.JFrame {
       SchedulePanel.setVisible(false);
         RoutePanel.setVisible(false);
     BusPanel.setVisible(false);
-StaffPanel.setVisible(false);// TODO add your handling code here:
+StaffPanel.setVisible(false);
+ForeseePanel.setVisible(false);
+ForeseePanel2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_TripButtonActionPerformed
 
     private void ScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScheduleButtonActionPerformed
@@ -637,7 +788,8 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
         RoutePanel.setVisible(false);
         BusPanel.setVisible(false);
         StaffPanel.setVisible(false);
-        ////void mouseEntered(MouseEvent e)
+        ForeseePanel.setVisible(false);
+ForeseePanel2.setVisible(false);////void mouseEntered(MouseEvent e)
         //{
     //}  // TODO add your handling code here:
     }//GEN-LAST:event_ScheduleButtonActionPerformed
@@ -671,7 +823,9 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
     SchedulePanel.setVisible(false);
     TripPanel.setVisible(false);
     BusPanel.setVisible(false);
-    StaffPanel.setVisible(false);// TODO add your handling code here:
+    StaffPanel.setVisible(false);
+ForeseePanel.setVisible(false);
+ForeseePanel2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_RouteButtonActionPerformed
 
     private void BusButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BusButtonMouseEntered
@@ -687,7 +841,9 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
         TripPanel.setVisible(false);
         RoutePanel.setVisible(false);
         BusPanel.setVisible(true);
-        StaffPanel.setVisible(false);// TODO add your handling code here:
+        StaffPanel.setVisible(false);
+        ForeseePanel.setVisible(false);
+ForeseePanel2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_BusButtonActionPerformed
 
     private void StaffButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StaffButtonMouseEntered
@@ -703,7 +859,9 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
         TripPanel.setVisible(false);
         RoutePanel.setVisible(false);
         BusPanel.setVisible(false);
-        StaffPanel.setVisible(true);// TODO add your handling code here:
+        StaffPanel.setVisible(true);
+ForeseePanel.setVisible(false);
+ForeseePanel2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_StaffButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -747,8 +905,32 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_ForeseeButtonMouseExited
 
     private void ForeseeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForeseeButtonActionPerformed
-        // TODO add your handling code here:
+        SchedulePanel.setVisible(false);
+        TripPanel.setVisible(false);
+        RoutePanel.setVisible(false);
+        BusPanel.setVisible(false);
+        StaffPanel.setVisible(false);
+        ForeseePanel.setVisible(true); 
+        ForeseePanel2.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_ForeseeButtonActionPerformed
+
+    private void FSourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FSourceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FSourceActionPerformed
+
+    private void FDestinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FDestinationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FDestinationActionPerformed
+
+    private void ForeseeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForeseeActionPerformed
+       SchedulePanel.setVisible(false);
+        TripPanel.setVisible(false);
+        RoutePanel.setVisible(false);
+        BusPanel.setVisible(false);
+        StaffPanel.setVisible(false);
+        ForeseePanel.setVisible(false);
+        ForeseePanel2.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_ForeseeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -798,9 +980,18 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
     private javax.swing.JSeparator DestinationSeperator;
     private javax.swing.JTextField EmpID;
     private javax.swing.JLabel Emp_id_staff;
+    private javax.swing.JLabel Emp_id_staff1;
+    private javax.swing.JLabel Emp_id_staff2;
     private javax.swing.JLabel EnterDestination;
     private javax.swing.JLabel EnterSource;
+    private javax.swing.JTextField FDestination;
+    private javax.swing.JTextField FSource;
+    private javax.swing.JButton Foresee;
     private javax.swing.JButton ForeseeButton;
+    private javax.swing.JPanel ForeseePanel;
+    private javax.swing.JPanel ForeseePanel2;
+    private javax.swing.JLabel Foreseetxt;
+    private javax.swing.JLabel Foreseetxt1;
     private javax.swing.JLabel GoSafeLogo;
     private javax.swing.JButton RouteButton;
     private javax.swing.JLabel RouteL;
@@ -827,6 +1018,8 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
     private javax.swing.JTextField Tripid;
     private javax.swing.JSeparator TripidSeperator;
     private javax.swing.JLabel about;
+    private javax.swing.JLabel about1;
+    private javax.swing.JLabel about2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -837,9 +1030,13 @@ StaffPanel.setVisible(false);// TODO add your handling code here:
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel tripl;
     // End of variables declaration//GEN-END:variables
 }
